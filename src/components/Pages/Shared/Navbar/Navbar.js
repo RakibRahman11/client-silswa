@@ -13,14 +13,8 @@ const Navbar = () => {
                 <AppBar sx={{ backgroundColor: 'white', color: 'black', boxShadow: 0 }} position="static">
                     <Toolbar>
                         <img src={silswaLogo} alt='' style={{ marginLeft: 1, width: '10%' }} />
-                        <Typography variant="h6" component="div" sx={{ marginLeft: '25%'}}>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
                             Silswa
-                        </Typography>
-                        <Typography variant="h6" component="div">
-                            Books
-                        </Typography>
-                        <Typography variant="h6" component="div" sx={{ marginRight: '40%'}}>
-                            Counseling 
                         </Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>

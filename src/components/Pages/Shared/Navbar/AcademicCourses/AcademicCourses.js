@@ -6,19 +6,19 @@ const courses = [
         title: 'English Written Courses for Admission',
         classes: 10,
         facilities: ['Lecture sheet', 'Recorded Class', 'Test', 'Mentor Support'],
-        YTLink: 'https://www.youtube.com/embed/MAyjZOL46Ck'
+        embedId: 'MAyjZOL46Ck'
     },
     {
         title: 'English 1st Paper',
         classes: 30,
         facilities: ['Lecture sheet', 'Free Guide Book', 'Recorded Class', 'Test', 'Special Written Class'],
-        YTLink: 'https://youtu.be/6RnXZPIczWY'
+        embedId: '6RnXZPIczWY'
     },
     {
         title: 'University Admission Preparation',
         classes: 60,
         facilities: ['Lecture sheet', 'Recorded Class', 'Weekly & Monthly Test', 'Model Test', 'Written Class', 'Strategic Class', 'Problem Solving Class'],
-        YTLink: 'https://youtu.be/EJ0Cy61xdbw'
+        embedId: 'EJ0Cy61xdbw'
     }
 ]
 const AcademicCourses = () => {
@@ -27,7 +27,7 @@ const AcademicCourses = () => {
             <Typography variant="h4" sx={{ border: '1px solid black', width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px' }}>
                 Academic Courses
             </Typography>
-            <Grid container spacing={5}>
+            <Grid container spacing={5} sx={{marginY:1, paddingX:3}}>
                 {
                     courses.map(course => <AcademicCourse
                         key={course?.title}

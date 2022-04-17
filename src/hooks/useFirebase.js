@@ -19,7 +19,7 @@ const useFirebase = () => {
             });
     }
 
-    // Create new user
+    // Create new users
     const newUser = (name, email, password) => {
         console.log(name)
         createUserWithEmailAndPassword(auth, email, password)

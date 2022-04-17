@@ -24,7 +24,7 @@ const courses = [
 const AcademicCourses = () => {
     return (
         <div style={{ backgroundColor: '#eff4ff', paddingTop: '50px' }}>
-            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px' }}>
+            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px', textAlign:'center' }}>
                 Academic Courses
             </Typography>
             <Grid container spacing={5} sx={{ marginY: 1, paddingX: 3 }}>

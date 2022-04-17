@@ -5,7 +5,7 @@ const AcademicCourse = (props) => {
     const { title, classes, facilities, embedId } = props.course;
     return (
         <Grid item xs={6} md={4} sx={{ borderRadius: 5 }}>
-            <Paper elevation={3} sx={{height:'100%'}}>
+            <Paper elevation={3} sx={{ height: '100%' }}>
                 <iframe
                     width="100%"
                     height="300"
@@ -15,16 +15,16 @@ const AcademicCourse = (props) => {
                     allowFullScreen
                     title="Embedded youtube"
                 />
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{ textAlign: 'center' }}>
                     {title}
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" sx={{ textAlign: 'center' }}>
                     {classes} Live classes
                 </Typography>
                 <ul>
                     {
                         facilities.map(facility =>
-                            <li>{facility}</li>) 
+                            <li>{facility}</li>)
                     }
                 </ul>
             </Paper>

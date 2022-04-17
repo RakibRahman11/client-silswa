@@ -1,5 +1,5 @@
 import './App.css';
-import AuthProvider from './components/Pages/AuthProvider/AuthProvider';
+import AuthProvider from './components/AuthProvider/AuthProvider';
 import Home from './components/Pages/FrontPages/Home/Home';
 
 function App() {

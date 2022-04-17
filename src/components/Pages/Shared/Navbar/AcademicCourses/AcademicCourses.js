@@ -24,10 +24,10 @@ const courses = [
 const AcademicCourses = () => {
     return (
         <div style={{ backgroundColor: '#eff4ff', paddingTop: '50px' }}>
-            <Typography variant="h4" sx={{ border: '1px solid black', width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px' }}>
+            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px' }}>
                 Academic Courses
             </Typography>
-            <Grid container spacing={5} sx={{marginY:1, paddingX:3}}>
+            <Grid container spacing={5} sx={{ marginY: 1, paddingX: 3 }}>
                 {
                     courses.map(course => <AcademicCourse
                         key={course?.title}

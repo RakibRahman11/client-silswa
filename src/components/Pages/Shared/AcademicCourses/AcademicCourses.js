@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import AcademicCourse from '../../AcademicCourse/AcademicCourse';
+import AcademicCourse from '../AcademicCourse/AcademicCourse';
 const courses = [
     {
         title: 'English Written Courses for Admission',

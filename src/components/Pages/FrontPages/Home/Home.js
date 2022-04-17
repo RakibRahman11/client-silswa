@@ -1,5 +1,6 @@
 import React from 'react';
-import AcademicCourses from '../../Shared/Navbar/AcademicCourses/AcademicCourses';
+import AcademicCourses from '../../Shared/AcademicCourses/AcademicCourses';
+import Featured from '../../Shared/Featured/Featured';
 import Navbar from '../../Shared/Navbar/Navbar';
 import Banner from '../Banner/Banner';
 import Counseling from '../Counseling/Counseling';
@@ -11,6 +12,7 @@ const Home = () => {
           <Banner></Banner>  
           <AcademicCourses></AcademicCourses>
           <Counseling></Counseling>
+          <Featured></Featured>
         </div>
     );
 };

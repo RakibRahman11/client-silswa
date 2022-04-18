@@ -30,6 +30,15 @@ const features = [
     },
     {
         img: 'https://i.ibb.co/y44HLgN/shomokal.png'
+    },
+    {
+        img: 'https://i.ibb.co/8KhptKM/rising-bd.png'
+    },
+    {
+        img: 'https://i.ibb.co/g6zKDgQ/daily-observer.png'
+    },
+    {
+        img: 'https://i.ibb.co/7rB4ppV/daily-bd.png'
     }
 ]
 
@@ -53,8 +62,8 @@ const Featured = () => {
                     modifier: 1,
                     slideShadows: false,
                     scale: 1,
-                  }}
-                  pagination={false}
+                }}
+                pagination={false}
                 Autoplay
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}

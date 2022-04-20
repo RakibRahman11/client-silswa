@@ -29,10 +29,10 @@ const Footer = () => {
                         Company
                     </Typography>
                     <ul style={{ color: 'white', listStyleType: 'square' }}>
-                        <li><Link to="/about" style={{color:'white', textDecoration:'none'}}>About Us</Link></li>
-                        <li>Privacy Policy</li>
+                        <li><Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>About Us</Link></li>
+                        <li><Link to="/privacyPolicy" style={{ color: 'white', textDecoration: 'none' }}>Privacy Policy</Link></li>
                         <li>Terms and Conditions</li>
-                        <li>Refund Policy</li>
+                        <li><Link to="/refund" style={{ color: 'white', textDecoration: 'none' }}>Refund Policy</Link></li>
                         <li>Contact us</li>
                     </ul>
                 </Grid>

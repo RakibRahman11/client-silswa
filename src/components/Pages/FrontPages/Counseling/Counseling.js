@@ -31,7 +31,7 @@ const Counseling = () => {
                     </Typography>
                     <img src={appointment} style={{ width: '80%' }} alt='' />
                 </Grid>
-                <Grid item xs={12} md={5} sx={{ borderRadius: '5px', backgroundColor: 'white', marginX: 'auto', paddingBottom:5 }}>
+                <Grid item xs={12} md={5} sx={{ borderRadius: '5px', backgroundColor: 'white', marginX: 'auto', paddingBottom: 5 }}>
                     <Typography variant="h5" sx={{ marginX: 'auto', color: 'black', fontWeight: 700, textAlign: 'center', marginY: 5 }}>
                         Book an appointment to get free counseling
                     </Typography>
@@ -48,7 +48,7 @@ const Counseling = () => {
                         <input style={{ width: '90%', height: '100px', padding: '15px 7px', fontSize: 13, backgroundColor: '#f8f8f8', border: '0px' }} placeholder="Mention what you would like counseling for" type="text" {...register("text")} required />
                         <br /><br />
 
-                        <Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color:'white' }}>Book the Appointment</Button>
+                        <Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white' }}>Book the Appointment</Button>
                     </form>
                 </Grid>
             </Grid>

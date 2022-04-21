@@ -1,9 +1,26 @@
-import { Container, Grid, Typography } from '@mui/material';
-import React from 'react';
+import { Grid, Typography } from '@mui/material';
+import React, { useEffect } from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
+import mapboxgl from 'mapbox-gl'
+mapboxgl.accessToken = 'pk.eyJ1IjoicmFraWIyMDIxIiwiYSI6ImNsMjh0d3VncTBiM2YzY2s3M3dsZmpmcDcifQ.tT4H8ClZprF9MIkWaQG3qg';
+
 
 const Contact = () => {
+    useEffect(() => {
+
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [90.39133629735517, 23.7410594981886], // starting position [lng, lat]
+            zoom: 15 // starting zoom
+        })
+        const marker1 = new mapboxgl.Marker()
+            .setLngLat([90.39133629735517, 23.7410594981886])
+            .addTo(map);
+        map.addControl(new mapboxgl.FullscreenControl());
+        map.addControl(new mapboxgl.NavigationControl());
+    }, [])
     return (
         <div style={{ backgroundColor: '#eff4ff' }}>
             <Navbar></Navbar>
@@ -44,11 +61,9 @@ const Contact = () => {
                             </Typography>
                         </Grid>
                         <Grid xs={12} md={6}>
-                            <Container>
-                                <Typography variant="caption">
-                                    164, Poribag, Sonargaon Road, Hatirpool, Dhanmondi, Dhaka - 1205
-                                </Typography>
-                            </Container>
+
+                            <div id="map"></div>
+
                         </Grid>
                     </Grid>
                 </div>

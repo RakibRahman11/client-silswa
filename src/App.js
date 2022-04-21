@@ -7,6 +7,7 @@ import PrivacyPolicy from './components/Pages/Company/PrivacyPolicy/PrivacyPolic
 import Refund from './components/Pages/Company/Refund/Refund';
 import Terms from './components/Pages/Company/Terms/Terms';
 import Contact from './components/Pages/Company/Contact/Contact';
+import Counseling from './components/Pages/FrontPages/Counseling/Counseling';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/refund" element={<Refund />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/counseling" element={<Counseling />} />
         </Routes>
       </Router>
     </AuthProvider >

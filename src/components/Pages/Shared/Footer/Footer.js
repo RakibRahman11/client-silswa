@@ -53,7 +53,7 @@ const Footer = () => {
                     </Typography>
                     <ul style={{ color: 'white', listStyleType: 'square' }}>
                         <li>Free Resources</li>
-                        <li>Free Counseling</li>
+                        <li><Link to="/counseling" style={{ color: 'white', textDecoration: 'none' }}>Free Counseling</Link></li>
                         <li>University Notice</li>
                         <li>Blogs</li>
                     </ul>

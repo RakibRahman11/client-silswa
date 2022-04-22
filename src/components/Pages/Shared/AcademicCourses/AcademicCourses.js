@@ -1,27 +1,14 @@
 import { Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AcademicCourse from '../AcademicCourse/AcademicCourse';
-const courses = [
-    {
-        title: 'English Written Courses for Admission',
-        classes: 10,
-        facilities: ['Lecture sheet', 'Recorded Class', 'Test', 'Mentor Support'],
-        embedId: 'MAyjZOL46Ck'
-    },
-    {
-        title: 'English 1st Paper',
-        classes: 30,
-        facilities: ['Lecture sheet', 'Free Guide Book', 'Recorded Class', 'Test', 'Special Written Class'],
-        embedId: '6RnXZPIczWY'
-    },
-    {
-        title: 'University Admission Preparation',
-        classes: 60,
-        facilities: ['Lecture sheet', 'Recorded Class', 'Weekly & Monthly Test', 'Model Test', 'Written Class', 'Strategic Class', 'Problem Solving Class'],
-        embedId: 'EJ0Cy61xdbw'
-    }
-]
+
 const AcademicCourses = () => {
+    const [courses, setCourses] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/courses')
+            .then(response => response.json())
+            .then(data => setCourses(data))
+    }, [])
     return (
         <div style={{ backgroundColor: '#eff4ff', paddingTop: '50px' }}>
             <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px', textAlign: 'center' }}>
@@ -35,6 +22,7 @@ const AcademicCourses = () => {
                     >
                     </AcademicCourse>)
                 }
+
             </Grid>
         </div>
     );

@@ -8,6 +8,7 @@ import Refund from './components/Pages/Company/Refund/Refund';
 import Terms from './components/Pages/Company/Terms/Terms';
 import Contact from './components/Pages/Company/Contact/Contact';
 import Counseling from './components/Pages/FrontPages/Counseling/Counseling';
+import CourseDetails from './components/Pages/Shared/CourseDetails/CourseDetails';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/counseling" element={<Counseling />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
         </Routes>
       </Router>
     </AuthProvider >

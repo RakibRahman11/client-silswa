@@ -28,7 +28,7 @@ const AcademicCourse = (props) => {
                             <li>{facility}</li>)
                     }
                 </ul>
-                <Link to={`/courses/${_id}`} style={{ textDecoration:'none' }}>
+                <Link to={`/courses/${_id}`} style={{ textDecoration: 'none' }}>
                     <Button variant="outlined" sx={{ width: '40%', padding: '10px 5px', fontSize: 16, backgroundColor: '#085078', color: 'white', marginLeft: '30%', marginBottom: 2 }}>Details</Button>
                 </Link>
             </Paper>

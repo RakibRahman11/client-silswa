@@ -9,6 +9,7 @@ import Terms from './components/Pages/Company/Terms/Terms';
 import Contact from './components/Pages/Company/Contact/Contact';
 import Counseling from './components/Pages/FrontPages/Counseling/Counseling';
 import CourseDetails from './components/Pages/Shared/CourseDetails/CourseDetails';
+import AddToCart from './components/Pages/Shared/Account/Login/AddToCart/AddToCart';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/counseling" element={<Counseling />} />
           <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/addToCart/:id" element={<AddToCart />} />
         </Routes>
       </Router>
     </AuthProvider >

@@ -12,7 +12,7 @@ const Counseling = () => {
         const userEmail = user?.email
         const date = new Date()
         const information = { ...data, date, userEmail }
-        axios.post('http://localhost:5000/counseling', information)
+        axios.post('https://hidden-earth-67301.herokuapp.com/counseling', information)
             .then(res => {
                 console.log(res)
                 alert('sure to add?');

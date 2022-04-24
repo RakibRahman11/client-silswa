@@ -1,9 +1,9 @@
 import { Button, Container, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import Footer from '../../../Footer/Footer';
-import Navbar from '../../../Navbar/Navbar';
+import Navbar from '../../Navbar/Navbar';
+import Footer from '../../Footer/Footer';
 
 const AddToCart = () => {
     const { id } = useParams()
@@ -14,7 +14,7 @@ const AddToCart = () => {
     const subtotal = parseInt(price + vat)
     let information;
 
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         if (data?.coupon === 'rakib10') {
             const offer = parseInt(subtotal * 0.1)
@@ -25,7 +25,7 @@ const AddToCart = () => {
 
     };
     useEffect(() => {
-        fetch('http://localhost:5000/courses')
+        fetch('https://hidden-earth-67301.herokuapp.com/courses')
             .then(response => response?.json())
             .then(data => setDetails(data))
     }, [])
@@ -114,11 +114,12 @@ const AddToCart = () => {
                             </Typography>
                             <br />
                             <Typography variant="caption" sx={{ width: '80%', display: 'inline-block' }}>
-                                Coupon discount
+                                Total
                             </Typography>
                             <Typography variant="caption" sx={{ fontWeight: 700 }}>
-                                {information?.offer}
+                                {subtotal}
                             </Typography>
+                            <Link to={`/checkout/${id}`}><Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white', marginX: 'auto', marginTop: 5 }}>Checkout</Button></Link>
                         </Paper>
                     </Grid>
                 </Grid>

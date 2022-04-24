@@ -9,7 +9,8 @@ import Terms from './components/Pages/Company/Terms/Terms';
 import Contact from './components/Pages/Company/Contact/Contact';
 import Counseling from './components/Pages/FrontPages/Counseling/Counseling';
 import CourseDetails from './components/Pages/Shared/CourseDetails/CourseDetails';
-import AddToCart from './components/Pages/Shared/Account/Login/AddToCart/AddToCart';
+import AddToCart from './components/Pages/Shared/Account/AddToCart/AddToCart';
+import Checkout from './components/Pages/Shared/Account/Checkout/Checkout';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/counseling" element={<Counseling />} />
           <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/addToCart/:id" element={<AddToCart />} />
+          <Route path="/checkout/:id" element={<Checkout/>} />
         </Routes>
       </Router>
     </AuthProvider >

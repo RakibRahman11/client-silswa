@@ -13,7 +13,7 @@ const CourseDetails = () => {
     const find = details?.find(item => item._id === id)
 
     useEffect(() => {
-        fetch('http://localhost:5000/courses')
+        fetch('https://hidden-earth-67301.herokuapp.com/courses')
             .then(response => response?.json())
             .then(data => setDetails(data))
     }, [])
@@ -72,7 +72,7 @@ const CourseDetails = () => {
                 </Grid>
                 <Grid container spacing={2} sx={{ marginTop: 5 }}>
                     <Grid item xs={12} md={4}>
-                        <img src={find?.authorImg} style={{ width: '70%', borderRadius: '50%' }} alt="" />
+                        <img src={find?.authorImg} style={{ width: '70%', border:'12px solid #085078', borderRadius: '50%' }} alt="" />
                     </Grid>
                     <Grid item xs={12} md={8}>
                         <Typography variant="h5" sx={{ fontWeight: 700, marginY: 5 }} >

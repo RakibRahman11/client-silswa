@@ -7,6 +7,9 @@ import Button from '@mui/material/Button';
 import silswaLogo from '../../../../Images/silswa-logo.png'
 import Modal from '@mui/material/Modal';
 import Login from '../Account/Login/Login';
+import useAuth from '../../../../hooks/useAuth';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 const style = {
     position: 'absolute',
@@ -21,6 +24,8 @@ const style = {
 };
 
 const Navbar = () => {
+    const { user, logOut } = useAuth()
+    console.log(user)
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -33,7 +38,15 @@ const Navbar = () => {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
 
                         </Typography>
-                        <Button onClick={handleOpen} color="inherit">Login</Button>
+                        {
+                            user.email ?
+                                <Stack direction="row">
+                                    <Avatar alt={user?.displayName || user?.email} src={user?.photoURL} />
+                                    <Button onClick={logOut} color="inherit">Logout</Button>
+                                </Stack>
+                                :
+                                <Button onClick={handleOpen} color="inherit">Login</Button>
+                        }
                         <Modal
                             open={open}
                             onClose={handleClose}

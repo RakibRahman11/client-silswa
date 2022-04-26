@@ -6,6 +6,10 @@ import Navbar from '../Navbar/Navbar';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const CourseDetails = () => {
     const { id } = useParams()
@@ -21,8 +25,8 @@ const CourseDetails = () => {
         <div>
             <Navbar></Navbar>
             <Container sx={{ marginY: 5 }}>
-                <Grid container spacing={5}>
-                    <Grid xs={12} md={8}>
+                <Grid container>
+                    <Grid xs={12} md={8} sx={{padding:5}}>
                         <Typography variant="h5" sx={{ fontWeight: 700, marginY: 5 }} >
                             {find?.title}
                         </Typography>
@@ -38,15 +42,25 @@ const CourseDetails = () => {
                                     <li>{facility}</li>)
                             }
                         </ul>
-                        <Typography variant="body1" sx={{ marginTop: 3 }}>
-                            Class schedule:
-                        </Typography>
-                        <ol>
-                            {
-                                find?.classSchedule.map(schedule =>
-                                    <li>{schedule}</li>)
-                            }
-                        </ol>
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography>Class schedule:</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    <ol>
+                                        {
+                                            find?.classSchedule.map(schedule =>
+                                                <li>{schedule}</li>)
+                                        }
+                                    </ol>
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
                     </Grid>
                     <Grid xs={12} md={4}>
                         <Paper elevation={3} sx={{ padding: 2 }}>
@@ -72,7 +86,7 @@ const CourseDetails = () => {
                 </Grid>
                 <Grid container spacing={2} sx={{ marginTop: 5 }}>
                     <Grid item xs={12} md={4}>
-                        <img src={find?.authorImg} style={{ width: '70%', border:'12px solid #085078', borderRadius: '50%' }} alt="" />
+                        <img src={find?.authorImg} style={{ width: '70%', border: '12px solid #085078', borderRadius: '50%' }} alt="" />
                     </Grid>
                     <Grid item xs={12} md={8}>
                         <Typography variant="h5" sx={{ fontWeight: 700, marginY: 5 }} >

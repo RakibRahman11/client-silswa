@@ -15,11 +15,15 @@ const Checkout = () => {
     const { user } = useAuth()
     const [details, setDetails] = useState([])
     const { register, handleSubmit, reset } = useForm();
+    
     const find = details?.find(item => item._id === id)
+
     const price = parseInt(find?.offerPrice)
     const vat = parseInt(price * 0.2)
     const subtotal = parseInt(price + vat)
-    console.log(find)
+    const info = [find, subtotal]
+    
+
     const onSubmit = (data) => {
         const userEmail = user?.email
         const date = new Date()
@@ -37,6 +41,7 @@ const Checkout = () => {
             .then(response => response?.json())
             .then(data => setDetails(data))
     }, [])
+
     return (
         <div style={{ backgroundColor: '#eff4ff' }}>
             <Navbar></Navbar>
@@ -75,7 +80,7 @@ const Checkout = () => {
                         <Grid xs={4} md={6}>
                             {
                                 subtotal && <Elements stripe={stripePromise}>
-                                    <CheckoutForm subtotal={subtotal} find={find} />
+                                    <CheckoutForm info={info} />
                                 </Elements>
                             }
                         </Grid>

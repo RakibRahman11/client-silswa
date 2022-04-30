@@ -1,9 +1,11 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import useAuth from '../../../../../hooks/useAuth';
 
-const CheckoutForm = () => {
-    const price = 800
+const CheckoutForm = ({info}) => {
+    const {id} = useParams()
+    const price = info[1]
     const stripe = useStripe();
     const elements = useElements();
     const { user } = useAuth()
@@ -64,6 +66,23 @@ const CheckoutForm = () => {
         else {
             setError('')
             setSuccess('Your payment done successfully')
+            const payment = {
+                amount : paymentIntent.amount,
+                created : paymentIntent.created,
+                last4 : paymentMethod.card.last4,
+                transaction : paymentIntent.client_secret.slice('_secret')[0]
+            }
+            const url = `https://hidden-earth-67301.herokuapp.com/payment/${id}`
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(payment)
+
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
         }
 
     }
@@ -87,7 +106,7 @@ const CheckoutForm = () => {
                     }}
                 />
                     <button type="submit" disabled={!stripe || success}>
-                        Pay {price}
+                        Pay {info[1]}
                     </button>
             </form>
             {

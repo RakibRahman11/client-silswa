@@ -2,9 +2,9 @@ import { Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
+import PhoneIcon from '@mui/icons-material/Phone';
 import mapboxgl from 'mapbox-gl'
 mapboxgl.accessToken = 'pk.eyJ1IjoicmFraWIyMDIxIiwiYSI6ImNsMjh0d3VncTBiM2YzY2s3M3dsZmpmcDcifQ.tT4H8ClZprF9MIkWaQG3qg';
-
 
 const Contact = () => {
     useEffect(() => {
@@ -15,7 +15,7 @@ const Contact = () => {
             center: [90.39133629735517, 23.7410594981886], // starting position [lng, lat]
             zoom: 15 // starting zoom
         })
-        const marker1 = new mapboxgl.Marker()
+        const marker = new mapboxgl.Marker()
             .setLngLat([90.39133629735517, 23.7410594981886])
             .addTo(map);
         map.addControl(new mapboxgl.FullscreenControl());
@@ -35,6 +35,7 @@ const Contact = () => {
                             <Typography variant="h4" sx={{ color: '#085078', fontWeight: 700, marginBottom: 5 }} gutterBottom component="div">
                                 Keep In Touch With Us
                             </Typography>
+
                             <Typography variant="h6" sx={{ color: '#085078', fontWeight: 700, marginBottom: 2 }} gutterBottom component="div">
                                 Address
                             </Typography>
@@ -50,7 +51,8 @@ const Contact = () => {
                                 <br />
                                 Phone: <span style={{ fontWeight: 700 }}>(+88) - 019639 - 189159</span>
                                 <br />
-                                Hotline: <span style={{ fontWeight: 700 }}>1800 - 1102</span>
+                                Hotline: <span style={{ fontWeight: 700 }}>1800 - 1102</span> <br />
+                                <a href="tel:01844456063" style={{textDecoration:'none', color:'black', fontWeight:700}}> <PhoneIcon /> Please click to direct call</a>
                             </Typography>
                             < hr />
                             <Typography variant="h6" sx={{ color: '#085078', fontWeight: 700, marginY: 2 }} gutterBottom component="div">

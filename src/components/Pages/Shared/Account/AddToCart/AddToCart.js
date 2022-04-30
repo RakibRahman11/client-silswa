@@ -12,7 +12,6 @@ const AddToCart = () => {
     const price = parseInt(find?.offerPrice)
     const vat = parseInt(price * 0.2)
     const subtotal = parseInt(price + vat)
-    let information;
 
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {

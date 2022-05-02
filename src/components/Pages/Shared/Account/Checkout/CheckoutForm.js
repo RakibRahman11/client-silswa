@@ -5,7 +5,9 @@ import useAuth from '../../../../../hooks/useAuth';
 
 const CheckoutForm = ({info}) => {
     const {id} = useParams()
+    console.log({info})
     const price = info[1]
+    const courseDetails = info[0]
     const stripe = useStripe();
     const elements = useElements();
     const { user } = useAuth()
@@ -72,7 +74,7 @@ const CheckoutForm = ({info}) => {
                 last4 : paymentMethod.card.last4,
                 transaction : paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `https://hidden-earth-67301.herokuapp.com/payment/${id}`
+            const url = `https://hidden-earth-67301.herokuapp.com/checkout/${id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {

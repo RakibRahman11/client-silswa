@@ -48,7 +48,6 @@ const Navbar = () => {
     };
 
     const { user, logOut } = useAuth()
-    console.log(user)
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);

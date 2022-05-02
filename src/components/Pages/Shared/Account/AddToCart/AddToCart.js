@@ -12,6 +12,8 @@ const AddToCart = () => {
     const price = parseInt(find?.offerPrice)
     const vat = parseInt(price * 0.2)
     const subtotal = parseInt(price + vat)
+    const course = [find, subtotal]
+    console.log(course);
 
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
@@ -118,7 +120,8 @@ const AddToCart = () => {
                             <Typography variant="caption" sx={{ fontWeight: 700 }}>
                                 {subtotal}
                             </Typography>
-                            <Link to={`/checkout/${id}`}><Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white', marginX: 'auto', marginTop: 5 }}>Checkout</Button></Link>
+                            <Link
+                            course={course} to={`/checkout/${id}`}><Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white', marginX: 'auto', marginTop: 5 }}>Checkout</Button></Link>
                         </Paper>
                     </Grid>
                 </Grid>

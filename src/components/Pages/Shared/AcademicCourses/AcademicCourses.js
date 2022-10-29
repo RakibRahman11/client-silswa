@@ -10,9 +10,9 @@ const AcademicCourses = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div style={{ backgroundColor: '#eff4ff', paddingTop: '50px' }}>
-            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#085078', backgroundColor: 'white', borderRadius: '35px', textAlign: 'center' }}>
-                Academic Courses
+        <div style={{ backgroundColor: '#F7F9F9', paddingTop: '50px' }}>
+            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#3768AF', textAlign: 'center', fontWeight: 700 }}>
+                Explore Courses
             </Typography>
             <Grid container spacing={5} sx={{ marginY: 1, paddingX: 3 }}>
                 {
@@ -24,6 +24,9 @@ const AcademicCourses = () => {
                 }
 
             </Grid>
+            <Typography variant="h6" sx={{ width: '250px', marginX: 'auto', color: 'white', textAlign: 'center', fontWeight: 700, backgroundColor: '#3768AF' }}>
+                Explore more skills
+            </Typography>
         </div>
     );
 };

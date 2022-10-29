@@ -2,16 +2,16 @@ import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
+import Partners from '../../Shared/Partners/Partners';
 import aboutImg from '../../../../Images/aboutImg.jpg'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import abdullah from '../../../../Images/f-member/abdullah.jpg'
+import abdullah from '../../../../Images/f-member/abdullah.png'
 import wasif from '../../../../Images/f-member/wasif.jpg'
 import arifa from '../../../../Images/f-member/arifa.jpg'
 import rifat from '../../../../Images/f-member/rifat.jpg'
-import Featured from '../../Shared/Featured/Featured';
 
 const AboutUs = () => {
     return (
@@ -92,7 +92,7 @@ const AboutUs = () => {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Featured></Featured>
+                <Partners></Partners>
             </Container>
 
             <Footer></Footer>

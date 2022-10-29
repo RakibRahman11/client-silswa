@@ -81,7 +81,7 @@ const Login = () => {
                     Sign Up
                 </Typography>
                 <Typography variant="caption" id="modal-modal-description" sx={{ mt: 2, textAlign: 'center', mx: '15%' }} display="block" gutterBottom>
-                Already have an account? <span onClick={() => setLogin(false)} style={{ fontWeight: 700 }}>Log in</span>
+                    Already have an account? <span onClick={() => setLogin(false)} style={{ fontWeight: 700 }}>Log in</span>
                 </Typography>
                 <form onSubmit={handleRegistration}>
                     <TextField

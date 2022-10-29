@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectCoverflow, Autoplay, Pagination } from 'swiper';
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
-const features = [
+const newsPartners = [
     {
         img: 'https://i.ibb.co/7rB4ppV/daily-bd.png'
     },
@@ -42,18 +42,18 @@ const features = [
     }
 ]
 
-const Featured = () => {
+const Partners = () => {
     return (
-        <Container>
-            <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: 'white', backgroundColor: '#085078', borderRadius: '35px', textAlign: 'center', marginBottom: 5 }}>
-                Featured in
+        <Container sx={{margin:'120px auto'}}>
+            <Typography sx={{ margin: '40px auto', textAlign: 'center', fontWeight: 700, color: '#3768AF' }} variant="h3" >
+                Our Partners
             </Typography>
             <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={false}
                 modules={[Autoplay]}
-                spaceBetween={40}
+                spaceBetween={30}
                 slidesPerView={4}
                 coverflowEffect={{
                     rotate: 50,
@@ -69,8 +69,8 @@ const Featured = () => {
                 onSwiper={(swiper) => console.log(swiper)}
             >
                 {
-                    features.map(feature => <SwiperSlide>
-                        <img src={feature?.img} style={{ width: '50%' }} alt='wed' />
+                    newsPartners.map(newsPartner => <SwiperSlide >
+                        <img src={newsPartner?.img} style={{ width: '50%', margin:'auto 20%' }} alt='' />
                     </SwiperSlide>)
                 }
             </Swiper>
@@ -78,4 +78,4 @@ const Featured = () => {
     );
 };
 
-export default Featured;
+export default Partners;

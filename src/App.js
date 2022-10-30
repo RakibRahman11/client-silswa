@@ -11,6 +11,7 @@ import Counseling from './components/Pages/FrontPages/Counseling/Counseling';
 import CourseDetails from './components/Pages/Shared/CourseDetails/CourseDetails';
 import AddToCart from './components/Pages/Shared/Account/AddToCart/AddToCart';
 import Checkout from './components/Pages/Shared/Account/Checkout/Checkout';
+import Login from './components/Pages/Shared/Account/Login/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/terms" element={<Terms />} />

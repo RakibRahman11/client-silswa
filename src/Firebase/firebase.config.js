@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBIXpeJyZ--0pByPqg9OKSOeMmuIdqbXyQ",
-    authDomain: "silswa-limited.firebaseapp.com",
-    projectId: "silswa-limited",
-    storageBucket: "silswa-limited.appspot.com",
-    messagingSenderId: "119632120641",
-    appId: "1:119632120641:web:42547988d984681499afc0"
+    apiKey: "AIzaSyDWSOu3IVrdvdA27UsECtnyUCqFre27FUU",
+    authDomain: "unicourse-2022.firebaseapp.com",
+    projectId: "unicourse-2022",
+    storageBucket: "unicourse-2022.appspot.com",
+    messagingSenderId: "661634673228",
+    appId: "1:661634673228:web:96e28d4e3e477b5d48a2e9"
 };
 
 export default firebaseConfig;

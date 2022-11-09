@@ -58,7 +58,7 @@ const Footer = () => {
                     <Link to="/refund" style={{ color: 'black', textDecoration: 'none', fontWeight: 500 }}>Privacy Policy</Link>
                 </Grid>
             </Grid>
-            <Typography variant="body1" gutterBottom sx={{ color: 'white', textAlign: 'center' }}>
+            <Typography variant="body1" gutterBottom sx={{ color: 'black', textAlign: 'center' }}>
                 &copy; 2022 Unicourse All rights reserved.
             </Typography>
         </div>

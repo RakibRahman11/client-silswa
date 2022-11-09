@@ -99,7 +99,7 @@ const Navbar = () => {
         <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 0 }}>
             {/* maxWidth="xl" */}
             <Toolbar disableGutters>
-                <img src={uniLogo} alt='' style={{ marginLeft: '50px', width: '10%', mr: 2, display: { xs: 'none', md: 'flex' } }} />
+                <img src={uniLogo} alt='' style={{ marginLeft: '20px', width: '10%' }} />
 
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                     <IconButton
@@ -156,7 +156,7 @@ const Navbar = () => {
                     <StyledInputBase
                         placeholder="What do you want to learn?"
                         inputProps={{ 'aria-label': 'search' }}
-                        sx={{ border: '1px solid #3768AF', color: 'black', width: '300px' }}
+                        sx={{ border: '1px solid #3768AF', color: 'black', width: { xs: '180px', md: '350px' }, display: { xs: 'flex', md: 'flex' }, fontSize:{xs:10, md:20} }}
                     />
                 </Search>
 

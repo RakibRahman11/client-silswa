@@ -70,7 +70,7 @@ const Partners = () => {
             >
                 {
                     newsPartners.map(newsPartner => <SwiperSlide >
-                        <img src={newsPartner?.img} style={{ width: '50%', margin:'auto 20%' }} alt='' />
+                        <img src={newsPartner?.img} style={{ width: '100%', margin:'auto 20%' }} alt='' />
                     </SwiperSlide>)
                 }
             </Swiper>

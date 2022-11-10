@@ -16,11 +16,11 @@ const AboutYT = () => {
                         title="Embedded youtube"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} sx={{ marginY: 'auto' }}>
-                    <Typography variant="h5" sx={{ textAlign: 'justify', marginX: '20%', marginBottom: '40px', fontWeight: 700, color: '#3768AF' }}>
+                <Grid item xs={12} sm={6} md={6} sx={{ marginTop: '50px' }}>
+                    <Typography variant="h5" sx={{ textAlign: 'justify', margin: '30px 20%', fontWeight: 700, color: '#3768AF' }}>
                         We dream to make your higher studies easier
                     </Typography>
-                    <Typography variant="h6" sx={{ textAlign: 'justify', marginLeft: '20%', marginTop: '5%', fontWeight: 700, display: 'inline', backgroundColor: '#3768AF', padding: '10px 25px', borderRadius: '8px', color: 'white' }}>
+                    <Typography variant="h6" sx={{ textAlign: 'justify', marginLeft: {md:'20%',xs:'14%'}, fontWeight: 700, display: 'inline', backgroundColor: '#3768AF', padding: '10px 25px', borderRadius: '8px', color: 'white' }}>
                         Learn more about us
                     </Typography>
                 </Grid>

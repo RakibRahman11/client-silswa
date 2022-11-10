@@ -23,7 +23,7 @@ const Banner = () => {
                         </Typography>
                         <br />
                         <br />
-                        <div style={{ paddingLeft:'18%' }}>
+                        <div style={{ paddingLeft: '18%' }}>
                             <Typography style={button} variant="h5" sx={{ backgroundColor: '#F6A113', fontSize: { xs: 20, md: 30 } }}>
                                 Join for free
                             </Typography>
@@ -32,7 +32,7 @@ const Banner = () => {
                             </Typography>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={12} md={5} sx={{ paddingRight: '5%' }}>
+                    <Grid xs={12} sm={12} md={5} sx={{ paddingX: {xs:'5%', md:'1%'} }}>
                         <img src={bannerNiru} style={{ width: '100%', height: '100%' }} alt='' />
                     </Grid>
                 </Grid>

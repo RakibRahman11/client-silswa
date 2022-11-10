@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import uniLogo from '../../../../Images/uniLogo.jpg'
+import uniLogo from '../../../../Images/uniLogo.png'
 import Modal from '@mui/material/Modal';
 import Login from '../Account/Login/Login';
 import useAuth from '../../../../hooks/useAuth';
@@ -138,7 +138,7 @@ const Navbar = () => {
                         ))}
                     </Menu>
                 </Box>
-                <Box sx={{ marginLeft: '30%', display: { xs: 'none', md: 'flex' } }}>
+                <Box sx={{ marginLeft: '20%', display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) => (
                         <Button
                             key={page}
@@ -156,7 +156,7 @@ const Navbar = () => {
                     <StyledInputBase
                         placeholder="What do you want to learn?"
                         inputProps={{ 'aria-label': 'search' }}
-                        sx={{ border: '1px solid #3768AF', color: 'black', width: { xs: '180px', md: '350px' }, display: { xs: 'flex', md: 'flex' }, fontSize:{xs:10, md:20} }}
+                        sx={{ border: '1px solid #3768AF', color: 'black', width: { xs: '170px', md: '350px' }, display: { xs: 'flex', md: 'flex' }, fontSize: { xs: 10, md: 20 } }}
                     />
                 </Search>
 
@@ -165,10 +165,10 @@ const Navbar = () => {
                         {
                             user.email ?
                                 <div>
-                                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                    <IconButton onClick={handleOpenUserMenu} sx={{ pl: 1 }}>
                                         <Avatar alt={user?.displayName || user?.email} src={user?.photoURL} />
                                     </IconButton>
-                                    <Button onClick={logOut} sx={{ color: 'black' }}>Logout</Button>
+                                    <Button onClick={logOut} sx={{ fontSize: 12, color: 'black' }}>Logout</Button>
                                 </div>
                                 :
                                 <Button onClick={handleOpen} sx={{ color: 'black' }}>Login</Button>

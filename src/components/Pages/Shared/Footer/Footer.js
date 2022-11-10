@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from "react-router-dom";
-import uniLogo from '../../../../Images/uniLogo.jpg'
+import uniLogo from '../../../../Images/uniLogo.png'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -15,7 +15,7 @@ const Footer = () => {
         <div style={{ backgroundColor: '#F7F9F9' }}>
             <Grid container spacing={2} sx={{ marginTop: 5, padding: 5 }}>
                 <Grid xs={12} sm={4} md={4} sx={{ marginBottom: 5 }}>
-                    <img src={uniLogo} style={{ width: '30%', paddingLeft: '25px' }} alt="" />
+                    <img src={uniLogo} style={{ width: '60%' }} alt="" />
                     <br />
                     <br />
                     <div>

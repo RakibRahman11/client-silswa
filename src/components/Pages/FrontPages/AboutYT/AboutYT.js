@@ -20,7 +20,7 @@ const AboutYT = () => {
                     <Typography variant="h5" sx={{ textAlign: 'justify', margin: '30px 20%', fontWeight: 700, color: '#3768AF' }}>
                         We dream to make your higher studies easier
                     </Typography>
-                    <Typography variant="h6" sx={{ textAlign: 'justify', marginLeft: {md:'20%',xs:'14%'}, fontWeight: 700, display: 'inline', backgroundColor: '#3768AF', padding: '10px 25px', borderRadius: '8px', color: 'white' }}>
+                    <Typography variant="h6" sx={{ textAlign: 'justify', marginLeft: { md: '20%', xs: '14%' }, fontWeight: 700, display: 'inline', backgroundColor: '#3768AF', padding: '10px 25px', borderRadius: '8px', color: 'white' }}>
                         Learn more about us
                     </Typography>
                 </Grid>

@@ -29,7 +29,7 @@ const Useful = () => {
             <Grid container style={gridUse}>
                 <Grid xs={12} sm={6} md={3} >
                     <Paper style={paperUseful} elevation={3} >
-                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} />
+                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} alt='High Quality' />
                         <Typography style={typoUseful} sx={{ marginTop: '35px', fontWeight: 700 }} variant="body1" gutterBottom>
                             High Quality Content
                         </Typography>
@@ -40,7 +40,7 @@ const Useful = () => {
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
                     <Paper style={paperUseful} elevation={3} >
-                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} />
+                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} alt='High Quality' />
                         <Typography style={typoUseful} sx={{ marginTop: '35px', fontWeight: 700 }} variant="body1" gutterBottom>
                             High Quality Content
                         </Typography>
@@ -51,7 +51,7 @@ const Useful = () => {
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
                     <Paper style={paperUseful} elevation={3} >
-                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} />
+                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} alt='High Quality' />
                         <Typography style={typoUseful} sx={{ marginTop: '35px', fontWeight: 700 }} variant="body1" gutterBottom>
                             High Quality Content
                         </Typography>
@@ -62,7 +62,7 @@ const Useful = () => {
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
                     <Paper style={paperUseful} elevation={3} >
-                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} />
+                        <img style={{ marginTop: '30px', marginLeft: '25%' }} src={icon} alt='High Quality' />
                         <Typography style={typoUseful} sx={{ marginTop: '35px', fontWeight: 700 }} variant="body1" gutterBottom>
                             High Quality Content
                         </Typography>

@@ -31,31 +31,31 @@ const Footer = () => {
                     <Typography variant="body1" gutterBottom sx={{ fontWeight: 700 }}>
                         Link
                     </Typography>
-                    <Link to="/privacy" style={{ color: 'black', textDecoration: 'none' }}>Courses</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none' }}>Courses</Link>
                     <br />
                     <br />
-                    <Link to="/terms" style={{ color: 'black', textDecoration: 'none' }}>About Us</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none' }}>About Us</Link>
                     <br />
                     <br />
-                    <Link to="/refund" style={{ color: 'black', textDecoration: 'none' }}>Career</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none' }}>Career</Link>
                     <br />
                     <br />
-                    <Link to="/contact" style={{ color: 'black', textDecoration: 'none' }}>Contact</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none' }}>Contact</Link>
                     <br />
                 </Grid>
                 <Grid xs={6} sm={5} md={5}>
                     <Typography variant="body1" gutterBottom sx={{ fontWeight: 700 }}>
                         For knowing more about us:
                     </Typography>
-                    <img src={facebook} style={{ width: '10%', marginRight: '10px' }} />
-                    <img src={youtube} style={{ width: '10%', marginRight: '10px' }} />
-                    <img src={instagram} style={{ width: '10%', marginRight: '10px' }} />
-                    <img src={linkedin} style={{ width: '10%', marginRight: '10px' }} />
+                    <img src={facebook} style={{ width: '10%', marginRight: '10px' }} alt='Facebook' />
+                    <img src={youtube} style={{ width: '10%', marginRight: '10px' }} alt='Youtube' />
+                    <img src={instagram} style={{ width: '10%', marginRight: '10px' }} alt='Instagram' />
+                    <img src={linkedin} style={{ width: '10%', marginRight: '10px' }} alt='LinkedIn' />
                     <br />
                     <br />
-                    <Link to="/privacy" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Terms & Conditions</Link>
-                    <Link to="/terms" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Refund Policy</Link>
-                    <Link to="/refund" style={{ color: 'black', textDecoration: 'none', fontWeight: 500 }}>Privacy Policy</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Terms & Conditions</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Refund Policy</Link>
+                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', fontWeight: 500 }}>Privacy Policy</Link>
                 </Grid>
             </Grid>
             <Typography variant="body1" gutterBottom sx={{ color: 'black', textAlign: 'center' }}>

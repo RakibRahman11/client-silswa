@@ -32,8 +32,8 @@ const Banner = () => {
                             </Typography>
                         </div>
                     </Grid>
-                    <Grid xs={12} sm={12} md={5} sx={{ paddingX: {xs:'5%', md:'1%'} }}>
-                        <img src={bannerNiru} style={{ width: '100%', height: '100%' }} alt='' />
+                    <Grid xs={12} sm={12} md={5} sx={{ paddingX: { xs: '5%', md: '1%' } }}>
+                        <img src={bannerNiru} style={{ width: '100%', height: '100%' }} alt='Banner' />
                     </Grid>
                 </Grid>
             </div>

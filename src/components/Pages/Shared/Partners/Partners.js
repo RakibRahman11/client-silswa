@@ -44,7 +44,7 @@ const newsPartners = [
 
 const Partners = () => {
     return (
-        <Container sx={{margin:'120px auto'}}>
+        <Container sx={{ margin: '120px auto' }}>
             <Typography sx={{ margin: '40px auto', textAlign: 'center', fontWeight: 700, color: '#3768AF' }} variant="h3" >
                 Our Partners
             </Typography>
@@ -70,7 +70,7 @@ const Partners = () => {
             >
                 {
                     newsPartners.map(newsPartner => <SwiperSlide >
-                        <img src={newsPartner?.img} style={{ width: '100%', margin:'auto 20%' }} alt='' />
+                        <img src={newsPartner?.img} style={{ width: '100%', margin: 'auto 20%' }} alt='' />
                     </SwiperSlide>)
                 }
             </Swiper>

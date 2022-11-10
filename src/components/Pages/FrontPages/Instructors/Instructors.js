@@ -31,7 +31,7 @@ const Instructors = () => {
             </Typography>
             <Grid container sx={gridInstructor}>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } />
+                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah
@@ -42,7 +42,7 @@ const Instructors = () => {
                     </div>
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={imgInstructor} />
+                    <img src={abdullah} style={imgInstructor} alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah
@@ -53,7 +53,7 @@ const Instructors = () => {
                     </div>
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } />
+                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah
@@ -64,7 +64,7 @@ const Instructors = () => {
                     </div>
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } />
+                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah

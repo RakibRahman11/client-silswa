@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import firebaseInit from "../Firebase/firebase.init";
 
@@ -7,6 +7,8 @@ firebaseInit()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
+
     const auth = getAuth();
 
     // Google Sign In
@@ -17,6 +19,15 @@ const useFirebase = () => {
             }).catch((error) => {
                 setUser(error.message);
             });
+    }
+
+    const facebookSignIn = () => {
+        signInWithPopup(auth, facebookProvider)
+        .then(result => {
+            // const { displayName, photoURL, email } = result.user;
+            console.log(result.user)
+            setUser(result.user);
+        })
     }
 
     // Create new users
@@ -62,6 +73,7 @@ const useFirebase = () => {
         newUser,
         userSignIn,
         googleSignIn,
+        facebookSignIn,
         logOut
     }
 };

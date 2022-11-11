@@ -3,13 +3,23 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import useAuth from '../../../../../hooks/useAuth';
 import GoogleIcon from '@mui/icons-material/Google';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Container, TextField } from '@mui/material';
 
 const Login = () => {
     const [login, setLogin] = useState(false)
     const [registerData, setRegisterData] = useState({})
     const [loginData, setLoginData] = useState({})
-    const { googleSignIn, newUser, userSignIn } = useAuth()
+    const { googleSignIn, facebookSignIn, newUser, userSignIn } = useAuth()
+
+    const socialSign = {
+        textAlign: 'center', 
+        color: 'black', 
+        backgroundColor: 'white', 
+        border: '1px solid lightGray',
+        margin: '0px 2px'
+    }
 
     // Register user
     const handleAccount = (e) => {
@@ -68,13 +78,15 @@ const Login = () => {
                     />
                     <br />
 
-                    <Button type="submit" sx={{ backgroundColor: '#085078', color: 'white', width: '100%', height: '50px', marginTop: 3, fontWeight: 700 }} variant="contained">Login</Button>
+                    <Button type="submit" sx={{ backgroundColor: '#3768AF', color: 'white', width: '100%', height: '50px', marginTop: 3, fontWeight: 700 }} variant="contained">Login</Button>
                     <br /><br />
                 </form>
                 <Typography variant="body1" id="modal-modal-description" sx={{ textAlign: 'center', mx: '25%' }} display="block" gutterBottom>
                     or
                 </Typography>
-                <Button onClick={googleSignIn} sx={{ textAlign: 'center', color: 'black', backgroundColor: 'white', border: '1px solid lightGray', mx: '15%', width: '70%' }}><GoogleIcon sx={{ color: 'red', fontSize: 30 }} />Continue with Google</Button>
+                <Button onClick={googleSignIn} style={socialSign}><GoogleIcon sx={{ color: 'black', fontSize: 30 }} />Google</Button>
+                <Button onClick={facebookSignIn} style={socialSign}><FacebookOutlinedIcon sx={{ color: 'black', fontSize: 30 }} />Facebook</Button>
+                <Button onClick={googleSignIn} style={socialSign}><LinkedInIcon sx={{ color: 'black', fontSize: 30 }} />LinkedIn</Button>
             </div>}
             {login && <div>
                 <Typography id="modal-modal-title" sx={{ fontWeight: 700, textAlign: 'center' }} variant="h4" component="h2">
@@ -85,6 +97,7 @@ const Login = () => {
                 </Typography>
                 <form onSubmit={handleRegistration}>
                     <TextField
+                        required
                         label="Name"
                         type="text"
                         name='name'
@@ -93,6 +106,7 @@ const Login = () => {
                     />
                     <br /><br />
                     <TextField
+                        required
                         label="Email"
                         type="email"
                         name='email'
@@ -101,6 +115,16 @@ const Login = () => {
                     />
                     <br /><br />
                     <TextField
+                        required
+                        label="Contact Number"
+                        type="number"
+                        name='number'
+                        onBlur={handleAccount}
+                        style={{ width: '100%' }}
+                    />
+                    <br /><br />
+                    <TextField
+                        required
                         label="Password"
                         type="password"
                         name="password"
@@ -109,6 +133,7 @@ const Login = () => {
                     />
                     <br /><br />
                     <TextField
+                        required
                         label="Retype-password"
                         type="password"
                         name="retypePassword"
@@ -117,7 +142,7 @@ const Login = () => {
                     />
                     <br />
 
-                    <Button type="submit" sx={{ backgroundColor: '#085078', color: 'white', width: '100%', height: '50px', marginTop: 3, fontWeight: 700 }} variant="contained">Register</Button>
+                    <Button type="submit" sx={{ backgroundColor: '#3768AF', color: 'white', width: '100%', height: '50px', marginTop: 3, fontWeight: 700 }} variant="contained">Register</Button>
                     <br /><br />
                 </form>
             </div>}

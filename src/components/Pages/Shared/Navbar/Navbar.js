@@ -163,11 +163,11 @@ const Navbar = () => {
                 <Box sx={{ flexGrow: 0, marginRight: 5 }}>
                     <Tooltip title="Open settings">
                         {
-                        <IconButton onClick={handleOpenUserMenu} sx={{ pl: 1 }}>
-                                        <Avatar alt={user?.displayName || user?.email} src={user?.photoURL} />
-                                    </IconButton>    user.email ?
+                            user.email ?
                                 <div>
-                                    
+                                    <IconButton onClick={handleOpenUserMenu} sx={{ pl: 1 }}>
+                                        <Avatar alt={user?.displayName || user?.email} src={user?.photoURL} />
+                                    </IconButton>
                                     <Button onClick={logOut} sx={{ fontSize: 12, color: 'black' }}>Logout</Button>
                                 </div>
                                 :

@@ -11,15 +11,15 @@ const divIns = {
     margin: 'auto'
 }
 const gridInstructor = {
-    marginY: '100px',
+    marginBottom: '100px',
     direction: "row",
     justifyContent: "center",
     alignItems: "center"
 }
 const imgInstructor = {
-    width: '80%', 
-    borderRadius: '20px', 
-    backgroundColor: '#131124', 
+    width: '80%',
+    borderRadius: '20px',
+    backgroundColor: '#131124',
     margin: '40px 0px 0px 42px'
 }
 
@@ -31,7 +31,7 @@ const Instructors = () => {
             </Typography>
             <Grid container sx={gridInstructor}>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
+                    <img src={abdullah} style={imgInstructor} alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah
@@ -53,7 +53,7 @@ const Instructors = () => {
                     </div>
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
+                    <img src={abdullah} style={imgInstructor} alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah
@@ -64,7 +64,7 @@ const Instructors = () => {
                     </div>
                 </Grid>
                 <Grid xs={12} sm={6} md={3} >
-                    <img src={abdullah} style={ imgInstructor } alt="Instructor" />
+                    <img src={abdullah} style={imgInstructor} alt="Instructor" />
                     <div style={divIns}>
                         <Typography variant='h5' sx={{ fontWeight: 700, textAlign: 'center' }}>
                             Md. Abdullah

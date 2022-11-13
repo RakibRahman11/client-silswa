@@ -19,6 +19,7 @@ import useAuth from '../../../../hooks/useAuth';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import { Link } from 'react-router-dom';
 
 const pages = ['Courses', 'Affiliation', 'About Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -99,8 +100,7 @@ const Navbar = () => {
         <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 0 }}>
             {/* maxWidth="xl" */}
             <Toolbar disableGutters>
-                <img src={uniLogo} alt='' style={{ marginLeft: '20px', width: '10%' }} />
-
+                < img src={uniLogo} alt='' style={{ marginLeft: '20px', width: '10%' }} />
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                     <IconButton
                         size="large"
@@ -209,7 +209,7 @@ const Navbar = () => {
                     </Box>
                 </Modal>
             </Toolbar>
-        </AppBar>
+        </AppBar >
     );
 };
 

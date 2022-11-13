@@ -23,7 +23,7 @@ const gridUse = {
 const Useful = () => {
     return (
         <div>
-            <Typography variant="h4" sx={{ width: '350px', margin: '50px auto', color: '#3768AF', textAlign: 'center', fontWeight: 700 }}>
+            <Typography variant="h4" sx={{ width: '350px', margin: '100px auto 20px auto', color: '#3768AF', textAlign: 'center', fontWeight: 700 }}>
                 Why use UniCourse?
             </Typography>
             <Grid container style={gridUse}>

@@ -24,7 +24,7 @@ const AcademicCourses = () => {
                 }
 
             </Grid>
-            <Typography variant="h6" sx={{ width: '250px', marginX: 'auto', color: 'white', textAlign: 'center', fontWeight: 700, backgroundColor: '#3768AF' }}>
+            <Typography variant="h6" sx={{ width: '250px', margin: '50px auto', color: 'white', textAlign: 'center', fontWeight: 700, backgroundColor: '#3768AF' }}>
                 Explore more skills
             </Typography>
         </div>

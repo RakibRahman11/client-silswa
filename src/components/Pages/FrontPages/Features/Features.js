@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 
 const gridFeature = {
-    border: '3px solid black', 
-    borderRadius: '15px', 
-    margin:'5px auto'
+    border: '3px solid black',
+    borderRadius: '15px',
+    margin: '5px auto'
 }
 
 const Features = () => {
@@ -14,7 +14,7 @@ const Features = () => {
                 Featured on
             </Typography>
             <Grid container sx={{ direction: "row", justifyContent: 'center', alignItems: "center" }}>
-                <Grid style={ gridFeature } xs={10} sm={6} md={2} >
+                <Grid style={gridFeature} xs={10} sm={6} md={2} >
                     <Typography variant="h4" sx={{ textAlign: 'center', marginY: '20px' }} >
                         Dhaka Post
                     </Typography>
@@ -25,7 +25,7 @@ const Features = () => {
                         16 October, 2022
                     </Typography>
                 </Grid>
-                <Grid style={ gridFeature } xs={10} sm={6} md={2} >
+                <Grid style={gridFeature} xs={10} sm={6} md={2} >
                     <Typography variant="h4" sx={{ textAlign: 'center', marginY: '20px' }} >
                         Dhaka Post
                     </Typography>
@@ -36,7 +36,7 @@ const Features = () => {
                         16 October, 2022
                     </Typography>
                 </Grid>
-                <Grid style={ gridFeature } xs={10} sm={6} md={2} >
+                <Grid style={gridFeature} xs={10} sm={6} md={2} >
                     <Typography variant="h4" sx={{ textAlign: 'center', marginY: '20px' }} >
                         Dhaka Post
                     </Typography>
@@ -47,7 +47,7 @@ const Features = () => {
                         16 October, 2022
                     </Typography>
                 </Grid>
-                <Grid style={ gridFeature } xs={10} sm={6} md={2} >
+                <Grid style={gridFeature} xs={10} sm={6} md={2} >
                     <Typography variant="h4" sx={{ textAlign: 'center', marginY: '20px' }} >
                         Dhaka Post
                     </Typography>

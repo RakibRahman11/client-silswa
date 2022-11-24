@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import { Grid } from '@mui/material';
+// import quote from '../../../../Images/quote.png'
+import banner from '../../../../Images/comBanner.png'
 
 const typoCom = {
     margin: '50px auto',
@@ -14,15 +16,15 @@ const typoCom = {
 }
 const gridCom = {
     marginY: '100px',
-    direction: "row",
+    direction: 'row',
     justifyContent: 'center',
-    alignItems: "center"
+    alignItems: 'center'
 }
 const cardCom = {
     maxWidth: 280,
     marginY: '10px',
-    marginX:'auto',
-    border: '2px solid green',
+    marginX: 'auto',
+    border: '2px solid #44ab97',
     paddingY: '50px',
     borderRadius: '20px'
 }
@@ -34,14 +36,17 @@ const contentCom = {
     textAlign: 'left',
     fontWeight: 500
 }
+const bannerImg = {
+    background: `url(${banner})`
+}
 
 const Community = () => {
     return (
-        <div style={{ backgroundColor: '#F7F9F9', margin: '100px 0px', padding: '20px 0px' }}>
+        <div style={{ backgroundColor: '#f3f5f9', margin: '100px 0px', padding: '20px 0px' }}>
             <Typography style={typoCom} variant="h4" sx={{ color: '#3768AF' }}>
                 UniCourse Student Community
             </Typography>
-            <Container sx={{ color: 'white', backgroundColor: '#3768AF', paddingY: '0.5px' }}>
+            <Container style={bannerImg} sx={{ color: 'white', paddingY: '0.5px' }}>
                 <Typography style={typoCom} variant="h2" >
                     5548+
                 </Typography>
@@ -52,6 +57,7 @@ const Community = () => {
             <Grid container sx={gridCom}>
                 <Grid xs={12} sm={6} md={3} >
                     <Card sx={cardCom}>
+                        {/* <img src={quote} style={{ width:'10%', backgroundColor:'#7f59b0' }} alt='quote' /> */}
                         <CardHeader sx={headerCom}
                             avatar={
                                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">

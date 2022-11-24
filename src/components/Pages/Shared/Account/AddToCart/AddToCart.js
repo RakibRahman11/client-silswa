@@ -86,7 +86,7 @@ const AddToCart = () => {
                     </Grid>
                     <Grid xs={2} md={2}>
                         <Typography variant="body" sx={{ fontWeight: 'bold' }}>
-                            delete
+                            Delete
                         </Typography>
                     </Grid>
                 </Grid>
@@ -102,7 +102,7 @@ const AddToCart = () => {
                         <form onSubmit={handleSubmit(onSubmit)} style={{ marginTop: '30px' }}>
                             <input style={{ width: '47%', padding: '15px 7px', fontSize: 13, backgroundColor: '#f8f8f8', border: '0px' }} placeholder="Coupon code"  {...register("coupon")} required />
                             <br /><br />
-                            <Button type="submit" variant="outlined" sx={{ width: '30%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white' }}>Apply coupon</Button>
+                            <Button type="submit" variant="contained" sx={{ width: '30%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white' }}>Apply coupon</Button>
                         </form>
                     </Grid>
                     <Grid xs={6} md={6}>
@@ -121,7 +121,7 @@ const AddToCart = () => {
                                 {subtotal}
                             </Typography>
                             <Link
-                            course={course} to={`/checkout/${id}`}><Button type="submit" variant="outlined" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white', marginX: 'auto', marginTop: 5 }}>Checkout</Button></Link>
+                                course={course} to={`/checkout/${id}`}><Button type="submit" variant="contained" sx={{ width: '90%', padding: '15px 7px', fontSize: 13, backgroundColor: '#085078', border: '0px', color: 'white', marginX: 'auto', marginTop: 5 }}>Checkout</Button></Link>
                         </Paper>
                     </Grid>
                 </Grid>

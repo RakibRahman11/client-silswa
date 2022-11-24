@@ -44,7 +44,8 @@ const newsPartners = [
 
 const Partners = () => {
     return (
-        <Container sx={{ margin: '120px auto' }}>
+        <div style={{backgroundColor:'#f3f5f9'}}>
+            <Container sx={{ margin: '120px auto', paddingY:1 }}>
             <Typography sx={{ margin: '40px auto', textAlign: 'center', fontWeight: 700, color: '#3768AF' }} variant="h3" >
                 Our Partners
             </Typography>
@@ -75,6 +76,7 @@ const Partners = () => {
                 }
             </Swiper>
         </Container>
+        </div>
     );
 };
 

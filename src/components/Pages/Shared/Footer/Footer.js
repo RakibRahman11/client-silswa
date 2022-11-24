@@ -10,9 +10,21 @@ import youtube from '../../../../Images/media/youtube.png'
 import instagram from '../../../../Images/media/instagram.png'
 import linkedin from '../../../../Images/media/linkedin.png'
 
+const mediaDesign = {
+    width: '10%', 
+    marginRight: '10px', 
+    backgroundColor:'white'
+}
+const policyDesign = {
+    color: 'black', 
+    textDecoration: 'none', 
+    marginRight: '30px', 
+    fontWeight: 500
+}
+
 const Footer = () => {
     return (
-        <div style={{ backgroundColor: '#F7F9F9' }}>
+        <div style={{ backgroundColor: '#f3f5f9' }}>
             <Grid container spacing={2} sx={{ marginTop: 5, padding: 5 }}>
                 <Grid xs={12} sm={4} md={4} sx={{ marginBottom: 5 }}>
                     <img src={uniLogo} style={{ width: '60%' }} alt="" />
@@ -47,15 +59,15 @@ const Footer = () => {
                     <Typography variant="body1" gutterBottom sx={{ fontWeight: 700 }}>
                         For knowing more about us:
                     </Typography>
-                    <img src={facebook} style={{ width: '10%', marginRight: '10px' }} alt='Facebook' />
-                    <img src={youtube} style={{ width: '10%', marginRight: '10px' }} alt='Youtube' />
-                    <img src={instagram} style={{ width: '10%', marginRight: '10px' }} alt='Instagram' />
-                    <img src={linkedin} style={{ width: '10%', marginRight: '10px' }} alt='LinkedIn' />
+                    <img src={facebook} style={mediaDesign} alt='Facebook' />
+                    <img src={youtube} style={mediaDesign} alt='Youtube' />
+                    <img src={instagram} style={mediaDesign} alt='Instagram' />
+                    <img src={linkedin} style={mediaDesign} alt='LinkedIn' />
                     <br />
                     <br />
-                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Terms & Conditions</Link>
-                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', marginRight: '30px', fontWeight: 500 }}>Refund Policy</Link>
-                    <Link to="/home" style={{ color: 'black', textDecoration: 'none', fontWeight: 500 }}>Privacy Policy</Link>
+                    <Link to="/home" style={policyDesign}>Terms & Conditions</Link>
+                    <Link to="/home" style={policyDesign}>Refund Policy</Link>
+                    <Link to="/home" style={policyDesign}>Privacy Policy</Link>
                 </Grid>
             </Grid>
             <Typography variant="body1" gutterBottom sx={{ color: 'black', textAlign: 'center' }}>

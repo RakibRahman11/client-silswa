@@ -8,10 +8,10 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import abdullah from '../../../../Images/f-member/abdullah.png'
-import wasif from '../../../../Images/f-member/wasif.jpg'
-import arifa from '../../../../Images/f-member/arifa.jpg'
-import rifat from '../../../../Images/f-member/rifat.jpg'
+import abdullah from '../../../../Images/instructor/abdullah.png'
+// import wasif from '../../../../Images/f-member/wasif.jpg'
+// import arifa from '../../../../Images/f-member/arifa.jpg'
+// import rifat from '../../../../Images/f-member/rifat.jpg'
 
 const AboutUs = () => {
     return (
@@ -54,7 +54,7 @@ const AboutUs = () => {
             <hr style={{ width: '10%', marginBottom: '80px' }} />
 
             <Container>
-                <Grid container spacing={2} sx={{marginBottom:'80px'}}>
+                <Grid container spacing={2} sx={{ marginBottom: '80px' }}>
                     <Grid xs={6} md={3}>
                         <img src={abdullah} style={{ width: '100%', borderRadius: '50%' }} alt="" />
                         <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center' }} >
@@ -65,29 +65,29 @@ const AboutUs = () => {
                         </Typography>
                     </Grid>
                     <Grid xs={6} md={3}>
-                        <img src={wasif} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
-                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft:5 }} >
+                        <img src={abdullah} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
+                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft: 5 }} >
                             MD. WASIF AZIM
                         </Typography>
-                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft:5 }} gutterBottom component="div">
+                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft: 5 }} gutterBottom component="div">
                             CHIEF FINANCIAL OFFICER
                         </Typography>
                     </Grid>
                     <Grid xs={6} md={3}>
-                        <img src={arifa} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
-                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft:4 }} >
+                        <img src={abdullah} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
+                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft: 4 }} >
                             TAFRIHA AKTAR ARIFA
                         </Typography>
-                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft:5 }} gutterBottom component="div">
+                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft: 5 }} gutterBottom component="div">
                             CHIEF MARKETING OFFICER
                         </Typography>
                     </Grid>
                     <Grid xs={6} md={3}>
-                        <img src={rifat} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
-                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft:5 }} >
+                        <img src={abdullah} style={{ width: '60%', borderRadius: '50%', marginLeft: '80px' }} alt="" />
+                        <Typography variant="h5" sx={{ color: '#031F42', fontWeight: 700, marginTop: 2, textAlign: 'center', marginLeft: 5 }} >
                             RIFAT HASAN
                         </Typography>
-                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft:5 }} gutterBottom component="div">
+                        <Typography variant="caption" sx={{ color: '#031F42', textAlign: 'center', marginTop: 3, marginLeft: 5 }} gutterBottom component="div">
                             CHIEF STRATEGIC OFFICER
                         </Typography>
                     </Grid>

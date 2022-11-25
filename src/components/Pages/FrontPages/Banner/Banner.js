@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import bannerNiru from '../../../../Images/banner-niru.png'
+import bannerMunna from '../../../../Images/bannerMunna.png'
 
 const button = {
     textAlign: 'justify',
@@ -33,7 +33,7 @@ const Banner = () => {
                         </div>
                     </Grid>
                     <Grid xs={12} sm={12} md={5} sx={{ paddingX: { xs: '5%', md: '1%' } }}>
-                        <img src={bannerNiru} style={{ width: '100%', height: '100%' }} alt='Banner' />
+                        <img src={bannerMunna} style={{ width: '65%', height: '100%' }} alt='Banner' />
                     </Grid>
                 </Grid>
             </div>

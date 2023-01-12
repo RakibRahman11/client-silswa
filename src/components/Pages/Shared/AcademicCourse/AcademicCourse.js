@@ -7,9 +7,9 @@ const AcademicCourse = (props) => {
     return (
         <Grid item xs={12} md={4} >
             <Paper elevation={3} sx={{ borderRadius: 3 }}>
-                <Typography variant="h6" sx={{ textAlign: 'center', padding: '40px', backgroundColor: `${colorCode}` , color: 'white' }} >
+                <Typography variant="h6" sx={{ textAlign: 'center', padding: '40px', backgroundColor: `${colorCode}`, color: 'white' }} >
                     {title}
-                </Typography> 
+                </Typography>
                 <Typography variant="h6" sx={{ padding: '10px 15px' }} >
                     {title}
                 </Typography>

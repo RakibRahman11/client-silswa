@@ -5,7 +5,7 @@ import AcademicCourse from '../AcademicCourse/AcademicCourse';
 const AcademicCourses = () => {
     const [courses, setCourses] = useState([])
     useEffect(() => {
-        fetch('https://server-silswa.vercel.app/courses')
+        fetch('https://server-silswa.onrender.com/courses')
             .then(response => response.json())
             .then(data => setCourses(data))
     }, [])

@@ -3,7 +3,7 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../../hooks/useAuth';
-import appointment from '../../../../Images/appointment.png'
+// import appointment from '../../../../Images/appointment.png'
 
 const Counseling = () => {
     const { user } = useAuth()
@@ -29,7 +29,7 @@ const Counseling = () => {
                     <Typography variant="body1">
                         Fill out the form to get directions or career counseling related to academic and admission studies.
                     </Typography>
-                    <img src={appointment} style={{ width: '80%' }} alt='' />
+                    {/* <img src={appointment} style={{ width: '80%' }} alt='' /> */}
                 </Grid>
                 <Grid item xs={12} md={5} sx={{ borderRadius: '5px', backgroundColor: 'white', marginX: 'auto', paddingBottom: 5 }}>
                     <Typography variant="h5" sx={{ marginX: 'auto', color: 'black', fontWeight: 700, textAlign: 'center', marginY: 5 }}>

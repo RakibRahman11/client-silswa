@@ -5,7 +5,7 @@ import AcademicCourse from '../AcademicCourse/AcademicCourse';
 const AcademicCourses = () => {
     const [courses, setCourses] = useState([])
     useEffect(() => {
-        fetch('https://hidden-earth-67301.herokuapp.com/courses')
+        fetch('https://server-silswa.vercel.app/courses')
             .then(response => response.json())
             .then(data => setCourses(data))
     }, [])

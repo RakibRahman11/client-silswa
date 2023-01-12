@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
 import Partners from '../../Shared/Partners/Partners';
-import aboutImg from '../../../../Images/aboutImg.jpg'
+// import aboutImg from '../../../../Images/aboutImg.jpg'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -26,7 +26,7 @@ const AboutUs = () => {
             <Typography variant="button1" sx={{ marginX: '38%', color: '#b0f737f', marginTop: 3 }} gutterBottom component="div">
                 Dream with SILSWA, Accomplish with SILSWA
             </Typography>
-            <img src={aboutImg} style={{ width: '50%', marginLeft: '23%', marginTop: '20px' }} alt="" />
+            {/* <img src={aboutImg} style={{ width: '50%', marginLeft: '23%', marginTop: '20px' }} alt="" /> */}
             <Typography variant="h6" sx={{ marginX: '30%', color: '#b0f737f', marginTop: 5, textAlign: 'center' }} gutterBottom component="div">
                 Silswa is an emerging EdTech Start Up in Bangladesh that aims to provide high quality academic, career and skill development courses through website and app. It has been working on online education in Bangladesh for the last 5 years and become one of the biggest online educational platforms in Bangladesh.
                 <br />

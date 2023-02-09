@@ -9,6 +9,7 @@ const AcademicCourses = () => {
             .then(response => response.json())
             .then(data => setCourses(data))
     }, [])
+    
     return (
         <div style={{ backgroundColor: '#f3f5f9', paddingTop: '50px' }}>
             <Typography variant="h4" sx={{ width: '350px', marginX: 'auto', color: '#396db6', textAlign: 'center', fontWeight: 700 }}>

@@ -1,13 +1,13 @@
+import { Container } from '@mui/material';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../../../../hooks/useAuth';
 
-const CheckoutForm = ({info}) => {
+const CheckoutForm = ({pay}) => {
     const {id} = useParams()
-    console.log({info})
-    const price = info[1]
-    const courseDetails = info[0]
+    const price = pay?.info[1]
+    const courseDetails = pay?.info[0]
     const stripe = useStripe();
     const elements = useElements();
     const { user } = useAuth()
@@ -16,7 +16,7 @@ const CheckoutForm = ({info}) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch("https://hidden-earth-67301.herokuapp.com/create-payment-intent", {
+        fetch("https://server-silswa.onrender.com/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ price }),
@@ -74,7 +74,7 @@ const CheckoutForm = ({info}) => {
                 last4 : paymentMethod.card.last4,
                 transaction : paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `https://hidden-earth-67301.herokuapp.com/checkout/${id}`
+            const url = `https://server-silswa.onrender.com/checkout/${id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -89,7 +89,7 @@ const CheckoutForm = ({info}) => {
 
     }
     return (
-        <div>
+        <Container>
             <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -108,7 +108,7 @@ const CheckoutForm = ({info}) => {
                     }}
                 />
                     <button type="submit" disabled={!stripe || success}>
-                        Pay {info[1]}
+                        Pay {pay.info[1]}
                     </button>
             </form>
             {
@@ -117,7 +117,7 @@ const CheckoutForm = ({info}) => {
             {
                 success && <p style={{ color: 'green' }}>{success}</p>
             }
-        </div>
+        </Container>
     );
 };
 

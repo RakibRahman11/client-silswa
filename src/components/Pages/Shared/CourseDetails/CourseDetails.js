@@ -19,7 +19,7 @@ const CourseDetails = () => {
     const find = details?.find(item => item._id === id)
 
     useEffect(() => {
-        fetch('https://hidden-earth-67301.herokuapp.com/courses')
+        fetch('https://server-silswa.onrender.com/courses')
             .then(response => response?.json())
             .then(data => setDetails(data))
     }, [])

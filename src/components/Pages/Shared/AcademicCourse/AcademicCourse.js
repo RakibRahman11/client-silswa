@@ -17,7 +17,7 @@ const AcademicCourse = (props) => {
                     Instructor: {author}
                 </Typography>
                 <Typography variant="body2" sx={{ padding: '10px 15px' }}>
-                    Course Fee: <p style={{ padding: '3px 10px', backgroundColor: '#ff0000', display: 'inline' }}>{price} BDT</p>
+                    Course Fee: <p style={{ padding: '3px 10px', backgroundColor: `${colorCode}`, display: 'inline' }}>{price} BDT</p>
                 </Typography>
 
                 <Link to={`/courses/${_id}`} style={{ textDecoration: 'none', textAlign: 'center' }}>

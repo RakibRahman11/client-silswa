@@ -19,9 +19,8 @@ import useAuth from '../../../../hooks/useAuth';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import { Link } from 'react-router-dom';
 
-const pages = ['Courses', 'Affiliation', 'About Us'];
+const pages = ['Courses', 'Dashboard', 'About Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const style = {
@@ -83,6 +82,7 @@ const Navbar = () => {
         setAnchorElNav(event.currentTarget);
     };
     const handleOpenUserMenu = (event) => {
+        console.log(event);
         setAnchorElUser(event.currentTarget);
     };
     const handleCloseNavMenu = () => {
@@ -100,7 +100,7 @@ const Navbar = () => {
         <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 0 }}>
             {/* maxWidth="xl" */}
             <Toolbar disableGutters>
-                <img src={uniLogo} alt='logo' style={{ marginLeft: '10px', minWidth:'18%', maxWidth:'20%' }} />
+                <img src={uniLogo} alt='logo' style={{ marginLeft: '10px', minWidth: '18%', maxWidth: '20%' }} />
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                     <IconButton
                         size="large"
@@ -132,7 +132,7 @@ const Navbar = () => {
                         }}
                     >
                         {pages.map((page) => (
-                            <MenuItem key={page} onClick={handleCloseNavMenu}>
+                            <MenuItem key={page} onClick={handleOpenNavMenu}>
                                 <Typography textAlign="center">{page}</Typography>
                             </MenuItem>
                         ))}
@@ -142,7 +142,7 @@ const Navbar = () => {
                     {pages.map((page) => (
                         <Button
                             key={page}
-                            onClick={handleCloseNavMenu}
+                            onClick={handleOpenNavMenu}
                             sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {page}

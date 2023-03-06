@@ -17,12 +17,12 @@ const AddToCart = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        if (data?.coupon === 'rakib10') {
-            const offer = parseInt(subtotal * 0.1)
-            const information = { ...data, offer }
-            console.log(information)
-            const final = parseInt(subtotal - offer)
-        }
+        // if (data?.coupon === 'rakib10') {
+        //     const offer = parseInt(subtotal * 0.1)
+        //     const information = { ...data, offer }
+        //     console.log(information)
+        //     const final = parseInt(subtotal - offer)
+        // }
 
     };
     useEffect(() => {

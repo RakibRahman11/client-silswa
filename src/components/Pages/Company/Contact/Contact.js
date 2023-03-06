@@ -52,7 +52,7 @@ const Contact = () => {
                                 Phone: <span style={{ fontWeight: 700 }}>(+88) - 019639 - 189159</span>
                                 <br />
                                 Hotline: <span style={{ fontWeight: 700 }}>1800 - 1102</span> <br />
-                                <a href="tel:01844456063" style={{textDecoration:'none', color:'black', fontWeight:700}}> <PhoneIcon /> Please click to direct call</a>
+                                <a href="tel:01844456063" style={{ textDecoration: 'none', color: 'black', fontWeight: 700 }}> <PhoneIcon /> Please click to direct call</a>
                             </Typography>
                             < hr />
                             <Typography variant="h6" sx={{ color: '#085078', fontWeight: 700, marginY: 2 }} gutterBottom component="div">

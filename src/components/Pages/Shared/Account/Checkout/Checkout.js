@@ -39,10 +39,12 @@ const Checkout = () => {
             .then(data => setDetails(data))
     }, [])
 
+    console.log(details);
+
     return (
         <div style={{ backgroundColor: '#eff4ff' }}>
             <Navbar></Navbar>
-            <Link to={'/dashboard'}>
+            <Link to={'/dashboard'} details={details}>
                 <Button variant="contained" sx={{ fontSize: 14, backgroundColor: '#085078', color: 'white', textAlign: 'center', margin: 5 }}>Go to the Dashboard</Button>
             </Link>
             <div sx={{ marginTop: 5, backgroundColor: 'white', padding: 2, borderRadius: '10px' }}>

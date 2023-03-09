@@ -29,6 +29,7 @@ const Login = () => {
         updateData[field] = value
         console.log(updateData)
         setRegisterData(updateData)
+        e.preventDefault()
     }
     const handleRegistration = e => {
         if (registerData.password !== registerData.retypePassword) {
@@ -46,11 +47,13 @@ const Login = () => {
         updateData[field] = value
         console.log(updateData)
         setLoginData(updateData)
+        e.preventDefault()
     }
     const handleLogin = e => {
         userSignIn(loginData.email, loginData.password)
         e.preventDefault()
     }
+
     return (
         <Container>
             {!login && <div>

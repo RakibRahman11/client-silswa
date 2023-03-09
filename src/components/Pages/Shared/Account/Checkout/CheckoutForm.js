@@ -1,24 +1,26 @@
+import React, { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../../../../hooks/useAuth';
 
-const CheckoutForm = ({pay}) => {
-    const {id} = useParams()
-    const price = pay?.info[1]
-    const courseDetails = pay?.info[0]
+const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
-    const { user } = useAuth()
+
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
-    const [clientSecret, setClientSecret] = useState('');
+    const [clientSecret, setClientSecret] = useState('')
+
+    const { user } = useAuth()
+    const { id } = useParams()
+    const price = 1170
+
 
     useEffect(() => {
         fetch("https://server-silswa.onrender.com/create-payment-intent", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "content-Type": "application/json" },
             body: JSON.stringify({ price }),
         })
             .then((res) => res.json())
@@ -69,10 +71,10 @@ const CheckoutForm = ({pay}) => {
             setError('')
             setSuccess('Your payment done successfully')
             const payment = {
-                amount : paymentIntent.amount,
-                created : paymentIntent.created,
-                last4 : paymentMethod.card.last4,
-                transaction : paymentIntent.client_secret.slice('_secret')[0]
+                amount: paymentIntent.amount,
+                created: paymentIntent.created,
+                last4: paymentMethod.card.last4,
+                transaction: paymentIntent.client_secret.slice('_secret')[0]
             }
             const url = `https://server-silswa.onrender.com/checkout/${id}`
             fetch(url, {
@@ -107,12 +109,13 @@ const CheckoutForm = ({pay}) => {
                         },
                     }}
                 />
-                    <button type="submit" disabled={!stripe || success}>
-                        Pay {pay.info[1]}
-                    </button>
+                <button type="submit">
+                    {/* disabled={!stripe || success} */}
+                    Pay {price}
+                </button>
             </form>
             {
-                error && <p style={{ color: 'red' }}>{error.message}</p>
+                error && <p style={{ color: 'red' }}>{error?.message}</p>
             }
             {
                 success && <p style={{ color: 'green' }}>{success}</p>

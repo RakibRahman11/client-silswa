@@ -18,7 +18,7 @@ const CheckoutForm = () => {
 
 
     useEffect(() => {
-        fetch("https://server-silswa.onrender.com/create-payment-intent", {
+        fetch("https://localhost/create-payment-intent", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: JSON.stringify({ price }),
